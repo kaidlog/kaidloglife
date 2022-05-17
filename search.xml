@@ -106,7 +106,7 @@
     
     
     <entry>
-      <title>貨幣簡單模型 Monetary Simple Model</title>
+      <title>What&#39;s Monetary Simple Model?</title>
       <link href="/2019/11/21/monetary_simple_model/"/>
       <url>/2019/11/21/monetary_simple_model/</url>
       
@@ -175,6 +175,60 @@
         <tags>
             
             <tag> sitemap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>My college life in nccu!</title>
+      <link href="/2014/11/23/nccu/"/>
+      <url>/2014/11/23/nccu/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>#NCCU</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lifestyle </category>
+          
+          <category> Nccu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> nccu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>My high school life in tnfsh!</title>
+      <link href="/2012/11/23/tnfsh/"/>
+      <url>/2012/11/23/tnfsh/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>#tnfsh</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lifestyle </category>
+          
+          <category> tnfsh </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tnfsh </tag>
             
         </tags>
       

@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kaidloglife.netlify.app/2012/11/23/tnfsh/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/2014/11/23/nccu/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kaidloglife.netlify.app/2019/12/05/leetcode/</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -21,15 +48,6 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -163,6 +181,13 @@
   </url>
   
   <url>
+    <loc>https://kaidloglife.netlify.app/tags/nccu/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kaidloglife.netlify.app/tags/markdown/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -197,6 +222,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://kaidloglife.netlify.app/tags/tnfsh/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -221,7 +253,7 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Markdown/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -229,6 +261,13 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/categories/Software-Development/leetcode/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Markdown/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -243,6 +282,20 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/categories/Commerce/Economics/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/Nccu/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/tnfsh/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
