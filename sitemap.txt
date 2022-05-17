@@ -13,8 +13,8 @@ https://kaidloglife.netlify.app/categories/index.html
 https://kaidloglife.netlify.app/about/index.html
 https://kaidloglife.netlify.app/
 https://kaidloglife.netlify.app/tags/footprint/
-https://kaidloglife.netlify.app/tags/changelog/
 https://kaidloglife.netlify.app/tags/leetcode/
+https://kaidloglife.netlify.app/tags/changelog/
 https://kaidloglife.netlify.app/tags/model/
 https://kaidloglife.netlify.app/tags/olg/
 https://kaidloglife.netlify.app/tags/markdown/
