@@ -1,0 +1,11 @@
+http://example.com/2022/05/17/My-New-Post/
+http://example.com/2022/05/18/about/
+http://example.com/tags/index.html
+http://example.com/2022/05/17/hello-world/
+http://example.com/categories/index.html
+http://example.com/2022/05/17/hello-world%202/
+http://example.com/2022/05/17/test/
+http://example.com/
+http://example.com/tags/heloo/
+http://example.com/categories/test/
+http://example.com/categories/he/
