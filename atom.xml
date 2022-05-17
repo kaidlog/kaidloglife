@@ -3,11 +3,11 @@
   <title>KaidlogLife</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://kaidloglife.netlify.app/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://kaidloglife.netlify.app/"/>
   <updated>2022-05-17T19:29:21.607Z</updated>
-  <id>http://example.com/</id>
+  <id>https://kaidloglife.netlify.app/</id>
   
   <author>
     <name>Cheng Kai(Nicholas) Cheng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>How to do unit test for golang program?</title>
-    <link href="http://example.com/2022/05/17/unit_test_golang/"/>
-    <id>http://example.com/2022/05/17/unit_test_golang/</id>
+    <link href="https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/"/>
+    <id>https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/</id>
     <published>2022-05-17T13:40:13.457Z</published>
     <updated>2022-05-17T19:29:21.607Z</updated>
     
@@ -33,23 +33,23 @@
     
     
     
-    <category term="Software Development" scheme="http://example.com/categories/Software-Development/"/>
+    <category term="Software Development" scheme="https://kaidloglife.netlify.app/categories/Software-Development/"/>
     
-    <category term="Test" scheme="http://example.com/categories/Software-Development/Test/"/>
+    <category term="Test" scheme="https://kaidloglife.netlify.app/categories/Software-Development/Test/"/>
     
     
-    <category term="golang" scheme="http://example.com/tags/golang/"/>
+    <category term="golang" scheme="https://kaidloglife.netlify.app/tags/golang/"/>
     
-    <category term="unit test" scheme="http://example.com/tags/unit-test/"/>
+    <category term="unit test" scheme="https://kaidloglife.netlify.app/tags/unit-test/"/>
     
   </entry>
   
   <entry>
     <title>Leetcode 1</title>
-    <link href="http://example.com/2019/12/05/leetcode/"/>
-    <id>http://example.com/2019/12/05/leetcode/</id>
+    <link href="https://kaidloglife.netlify.app/2019/12/05/leetcode/"/>
+    <id>https://kaidloglife.netlify.app/2019/12/05/leetcode/</id>
     <published>2019-12-05T14:51:24.000Z</published>
-    <updated>2022-05-17T18:19:02.322Z</updated>
+    <updated>2022-05-17T19:49:50.242Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="解-Leetcode-大作戰-Day-1"><a href="#解-Leetcode-大作戰-Day-1" class="headerlink" title="解 Leetcode 大作戰 Day 1"></a>解 Leetcode 大作戰 Day 1</h1><p>給定一個整數數組 nums 和一個目標值 target，請你在該數組中找出和為目標值的那 兩個 整數，並返回他們的數組下標。</p><p>你可以假設每種輸入只會對應一個答案。但是，你不能重復利用這個數組中同樣的元素。</p><p>示例:</p><blockquote><p>给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</p><p>因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9<br>所以返回 [0, 1]</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">   def twoSum(self, nums, target):</span><br><span class="line">       &quot;&quot;&quot;</span><br><span class="line">       :type nums: List[int]</span><br><span class="line">       :type target: int</span><br><span class="line">       :rtype: List[int]</span><br><span class="line">       &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">       hashmap=&#123;&#125;</span><br><span class="line">       for i,num in enumerate(nums):</span><br><span class="line">           if hashmap.get(target - num) is not None:</span><br><span class="line">               return [i,hashmap.get(target - num)]</span><br><span class="line">           hashmap[num] = i</span><br></pre></td></tr></table></figure><p>測試結果複製以下代碼:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums = [2, 7, 11, 15]</span><br><span class="line">target = 9</span><br><span class="line">test = Solution(nums,target)</span><br><span class="line">test.twoSum(nums, target)</span><br></pre></td></tr></table></figure><h2 id="解題邏輯"><a href="#解題邏輯" class="headerlink" title="解題邏輯:"></a>解題邏輯:</h2><h3 id="❤❤❤-關鍵-想到-“target-num”-是否存在-nums-陣列之中"><a href="#❤❤❤-關鍵-想到-“target-num”-是否存在-nums-陣列之中" class="headerlink" title="❤❤❤ 關鍵: 想到 “target - num” 是否存在 nums 陣列之中"></a>❤❤❤ 關鍵: 想到 “target - num” 是否存在 nums 陣列之中</h3><p>這裡用的 enumerate 的函數，可以快速將陣列裡面的元素加上編號，詳細可以看 <a href="https://www.runoob.com/python/python-func-enumerate.html">enumerate</a>，所以這邊的 enumerate(nums) 會變成 </p><blockquote><p>[(0:2), (1:7),(2,11),(3,15)]</p></blockquote><p>判定如果 target - num 如果存在於 nums 中的話，就拿出來放在 hashmap 這個字典內，直接省略了一個 for 迴圈去找另一個值，反正如果有解肯定可以被抓出來丟到 hashmap 裡面 </p><p>所以這題的結果是這樣的</p><blockquote><p>9 減 2 得到 7 在 nums 陣列中，return[0,7], 把 [2]:0 放進 hashmap 裡面，同理往下做<br>最後找到兩個值[2]:0、[7]:1<br>所以得到 0:1</p></blockquote><div class="note info flat"><p>用 repl.it 測試一下，確實可行</p></div><iframe height="800px" width="100%" src="https://repl.it/@Daekony/WirySilverChapters?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>]]></content>
     
@@ -61,19 +61,19 @@
     
     
     
-    <category term="Software Development" scheme="http://example.com/categories/Software-Development/"/>
+    <category term="Software Development" scheme="https://kaidloglife.netlify.app/categories/Software-Development/"/>
     
-    <category term="leetcode" scheme="http://example.com/categories/Software-Development/leetcode/"/>
+    <category term="leetcode" scheme="https://kaidloglife.netlify.app/categories/Software-Development/leetcode/"/>
     
     
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    <category term="leetcode" scheme="https://kaidloglife.netlify.app/tags/leetcode/"/>
     
   </entry>
   
   <entry>
     <title>如何在部落格加入你的旅行足跡 How to add your footprint in your blog</title>
-    <link href="http://example.com/2019/11/23/blog/"/>
-    <id>http://example.com/2019/11/23/blog/</id>
+    <link href="https://kaidloglife.netlify.app/2019/11/23/blog/"/>
+    <id>https://kaidloglife.netlify.app/2019/11/23/blog/</id>
     <published>2019-11-23T11:57:15.000Z</published>
     <updated>2022-05-17T18:19:02.245Z</updated>
     
@@ -87,19 +87,19 @@
     
     
     
-    <category term="Software Development" scheme="http://example.com/categories/Software-Development/"/>
+    <category term="Software Development" scheme="https://kaidloglife.netlify.app/categories/Software-Development/"/>
     
-    <category term="Blog" scheme="http://example.com/categories/Software-Development/Blog/"/>
+    <category term="Blog" scheme="https://kaidloglife.netlify.app/categories/Software-Development/Blog/"/>
     
     
-    <category term="footprint" scheme="http://example.com/tags/footprint/"/>
+    <category term="footprint" scheme="https://kaidloglife.netlify.app/tags/footprint/"/>
     
   </entry>
   
   <entry>
     <title>更新日誌 Changelog</title>
-    <link href="http://example.com/2019/11/23/changelog/"/>
-    <id>http://example.com/2019/11/23/changelog/</id>
+    <link href="https://kaidloglife.netlify.app/2019/11/23/changelog/"/>
+    <id>https://kaidloglife.netlify.app/2019/11/23/changelog/</id>
     <published>2019-11-23T09:13:03.000Z</published>
     <updated>2022-05-17T18:19:02.260Z</updated>
     
@@ -114,14 +114,14 @@
     
     
     
-    <category term="changelog" scheme="http://example.com/tags/changelog/"/>
+    <category term="changelog" scheme="https://kaidloglife.netlify.app/tags/changelog/"/>
     
   </entry>
   
   <entry>
     <title>貨幣簡單模型 Monetary Simple Model</title>
-    <link href="http://example.com/2019/11/21/monetary_simple_model/"/>
-    <id>http://example.com/2019/11/21/monetary_simple_model/</id>
+    <link href="https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/"/>
+    <id>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</id>
     <published>2019-11-21T13:32:45.000Z</published>
     <updated>2022-05-17T19:21:33.859Z</updated>
     
@@ -135,21 +135,21 @@
     
     
     
-    <category term="Commerce" scheme="http://example.com/categories/Commerce/"/>
+    <category term="Commerce" scheme="https://kaidloglife.netlify.app/categories/Commerce/"/>
     
-    <category term="Economics" scheme="http://example.com/categories/Commerce/Economics/"/>
+    <category term="Economics" scheme="https://kaidloglife.netlify.app/categories/Commerce/Economics/"/>
     
     
-    <category term="model" scheme="http://example.com/tags/model/"/>
+    <category term="model" scheme="https://kaidloglife.netlify.app/tags/model/"/>
     
-    <category term="olg" scheme="http://example.com/tags/olg/"/>
+    <category term="olg" scheme="https://kaidloglife.netlify.app/tags/olg/"/>
     
   </entry>
   
   <entry>
     <title>個人筆記 Notes</title>
-    <link href="http://example.com/2019/11/21/note/"/>
-    <id>http://example.com/2019/11/21/note/</id>
+    <link href="https://kaidloglife.netlify.app/2019/11/21/note/"/>
+    <id>https://kaidloglife.netlify.app/2019/11/21/note/</id>
     <published>2019-11-21T08:17:16.000Z</published>
     <updated>2022-05-17T18:19:02.382Z</updated>
     
@@ -163,21 +163,21 @@
     
     
     
-    <category term="Software Development" scheme="http://example.com/categories/Software-Development/"/>
+    <category term="Software Development" scheme="https://kaidloglife.netlify.app/categories/Software-Development/"/>
     
-    <category term="Markdown" scheme="http://example.com/categories/Software-Development/Markdown/"/>
+    <category term="Markdown" scheme="https://kaidloglife.netlify.app/categories/Software-Development/Markdown/"/>
     
     
-    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
+    <category term="markdown" scheme="https://kaidloglife.netlify.app/tags/markdown/"/>
     
-    <category term="notes" scheme="http://example.com/tags/notes/"/>
+    <category term="notes" scheme="https://kaidloglife.netlify.app/tags/notes/"/>
     
   </entry>
   
   <entry>
     <title>網站導覽 Sitemap</title>
-    <link href="http://example.com/2019/11/20/sitemap/"/>
-    <id>http://example.com/2019/11/20/sitemap/</id>
+    <link href="https://kaidloglife.netlify.app/2019/11/20/sitemap/"/>
+    <id>https://kaidloglife.netlify.app/2019/11/20/sitemap/</id>
     <published>2019-11-20T14:23:30.000Z</published>
     <updated>2022-05-17T19:40:01.606Z</updated>
     
@@ -192,7 +192,7 @@
     
     
     
-    <category term="sitemap" scheme="http://example.com/tags/sitemap/"/>
+    <category term="sitemap" scheme="https://kaidloglife.netlify.app/tags/sitemap/"/>
     
   </entry>
   

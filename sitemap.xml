@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2019/11/20/sitemap/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/12/05/leetcode/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/05/17/unit_test_golang/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/20/sitemap/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2019/11/21/monetary_simple_model/</loc>
+    <loc>https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2019/11/21/note/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2019/12/05/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/21/note/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2019/11/23/changelog/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/23/changelog/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2019/11/23/blog/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/23/blog/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/tags/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/music/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/music/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/movies/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/movies/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/link/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/link/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/categories/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://kaidloglife.netlify.app/about/index.html</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -120,7 +120,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://kaidloglife.netlify.app/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -128,70 +128,70 @@
 
   
   <url>
-    <loc>http://example.com/tags/footprint/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/changelog/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/model/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/leetcode/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/olg/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/markdown/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/changelog/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/notes/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/markdown/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/model/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/notes/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/olg/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/footprint/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/sitemap/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/sitemap/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/golang/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/golang/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/unit-test/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/unit-test/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -200,49 +200,49 @@
 
   
   <url>
-    <loc>http://example.com/categories/Software-Development/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Commerce/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Commerce/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Software-Development/Blog/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Blog/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Software-Development/Markdown/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/leetcode/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Software-Development/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Test/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Commerce/Economics/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Markdown/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Software-Development/Test/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Commerce/Economics/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
