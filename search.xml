@@ -4,108 +4,27 @@
   
     
     <entry>
-      <title>about</title>
-      <link href="/2022/05/18/about/"/>
-      <url>/2022/05/18/about/</url>
+      <title>How to do unit test for golang program?</title>
+      <link href="/2022/05/17/unit_test_golang/"/>
+      <url>/2022/05/17/unit_test_golang/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World2</title>
-      <link href="/2022/05/17/hello-world%202/"/>
-      <url>/2022/05/17/hello-world%202/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><blockquote><p>實作一個功能能夠計算出水仙花數，並且提供一個正確的測試案例，一個錯誤的測試案例，測試完執行結果正確。   </p><blockquote><p>Last edited : Cheng-Kai Cheng<br>Language : Golang</p></blockquote></blockquote></blockquote><h3 id="1-甚麼是水仙花數-Narcissistic-number又被稱作-Armstrong-Number"><a href="#1-甚麼是水仙花數-Narcissistic-number又被稱作-Armstrong-Number" class="headerlink" title="1. 甚麼是水仙花數(Narcissistic number又被稱作 Armstrong Number)?"></a>1. 甚麼是水仙花數(Narcissistic number又被稱作 Armstrong Number)?</h3><p>先上 wiki找，了解一下<a href="https://zh.wikipedia.org/zh-tw/%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0">水仙花數</a></p><p>用一個簡單的例子來說明:</p><p><code>370 = 3^3 + 7^3 + 0^3。</code></p><p>370 是三位數，所以次方為 3，然後每個數字的 3次方的和為 370。</p><p>既然理解需求了，我們就實際來處理需求吧!</p><ol><li>打開 Goland IDE</li><li>新增一個 package， narcissisticNumberCal</li><li>底下新增一個 go file, narcissisticNumberCal.go</li></ol><h4 id="代碼如下"><a href="#代碼如下" class="headerlink" title="代碼如下"></a>代碼如下</h4><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">package</span> narcissisticNumberCal</span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span> <span class="string">&quot;math&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">CalculateIsArmstrong</span><span class="params">(n <span class="type">int</span>)</span></span> <span class="type">bool</span>&#123;</span><br><span class="line">a := n / <span class="number">100</span></span><br><span class="line">b := n % <span class="number">100</span> / <span class="number">10</span></span><br><span class="line">c := n % <span class="number">10</span></span><br><span class="line"><span class="keyword">return</span> n == <span class="type">int</span>(math.Pow(<span class="type">float64</span>(a), <span class="number">3</span>) + math.Pow(<span class="type">float64</span>(b), <span class="number">3</span>) + math.Pow(<span class="type">float64</span>(c),<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h3 id="2-我們要如何做單元測試，證明這個-func-是正確的呢"><a href="#2-我們要如何做單元測試，證明這個-func-是正確的呢" class="headerlink" title="2. 我們要如何做單元測試，證明這個 func 是正確的呢??"></a>2. 我們要如何做單元測試，證明這個 func 是正確的呢??</h3><p>   &#x2F;&#x2F;在 同樣目錄底下新增一個 go file, narcissisticNumberCal_test.go</p><p>   &#x2F;&#x2F;代碼如下</p><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">package</span> narcissisticNumberCal_test</span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span> (</span><br><span class="line"><span class="string">&quot;awesomeProject1/narcissisticNumberCal&quot;</span></span><br><span class="line"><span class="string">&quot;testing&quot;</span></span><br><span class="line">  )</span><br><span class="line">  <span class="comment">// 抽象化宣告</span></span><br><span class="line">  <span class="keyword">type</span> TestCase <span class="keyword">struct</span> &#123;</span><br><span class="line">value <span class="type">int</span></span><br><span class="line">expected <span class="type">bool</span></span><br><span class="line">actual <span class="type">bool</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 因為 371 是水仙花數，我們實體化 testCase，</span></span><br><span class="line">  <span class="comment">// 並且賦值給 testCase，期望為正確的(true)</span></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">TestCalculateIsArmstrong</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">testCase := TestCase&#123;</span><br><span class="line">value: <span class="number">371</span>,</span><br><span class="line">expected: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br><span class="line">   <span class="comment">// 調用你寫的 func，並帶入 371，看跟 testCase 是否相同?</span></span><br><span class="line">testCase.actual = narcissisticNumberCal.CalculateIsArmstrong(testCase.value)</span><br><span class="line">   <span class="comment">// 若相同則為不抱錯</span></span><br><span class="line"><span class="keyword">if</span> testCase.actual != testCase.expected &#123;</span><br><span class="line">t.Fail()</span><br><span class="line">&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>   &#x2F;&#x2F;執行結果</p><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Kevin Cheng\GolandProjects\awesomeProject1&gt; <span class="keyword">go</span> test ./... -v</span><br><span class="line">=== RUN   TestCalculateIsArmstrong</span><br><span class="line">--- PASS: TestCalculateIsArmstrong (<span class="number">0.00</span>s)</span><br><span class="line">PASS</span><br><span class="line">ok      awesomeProject1/narcissisticNumberCal   <span class="number">0.234</span>s</span><br></pre></td></tr></table></figure><p>   &#x2F;&#x2F;到了這邊，我們會思考一件事情，就是那錯誤案例怎麼測?同樣道理<br>   &#x2F;&#x2F;新增一個測試 negative 的 func<br>   &#x2F;&#x2F;代碼如下:</p><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">package</span> narcissisticNumberCal_test</span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span> (</span><br><span class="line"><span class="string">&quot;awesomeProject1/narcissisticNumberCal&quot;</span></span><br><span class="line"><span class="string">&quot;testing&quot;</span></span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  <span class="keyword">type</span> TestCase <span class="keyword">struct</span> &#123;</span><br><span class="line">value <span class="type">int</span></span><br><span class="line">expected <span class="type">bool</span></span><br><span class="line">actual <span class="type">bool</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">TestCalculateIsArmstrong</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">testCase := TestCase&#123;</span><br><span class="line">value: <span class="number">371</span>,</span><br><span class="line">expected: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">testCase.actual = narcissisticNumberCal.CalculateIsArmstrong(testCase.value)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> testCase.actual != testCase.expected &#123;</span><br><span class="line">t.Fail()</span><br><span class="line">&#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//因為 350 不是水仙花數，所以我們期望是錯誤的，那麼就應該在調用我們 func 回傳 false</span></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">TestNegativeCalculateIsArmstrong</span><span class="params">(t *testing.T)</span></span>&#123;</span><br><span class="line">testCase := TestCase&#123;</span><br><span class="line">value: <span class="number">350</span>,</span><br><span class="line">expected: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">testCase.actual = narcissisticNumberCal.CalculateIsArmstrong(testCase.value)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> testCase.actual != testCase.expected &#123;</span><br><span class="line">t.Fail()</span><br><span class="line">&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>執行結果</p><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Kevin Cheng\GolandProjects\awesomeProject1&gt; <span class="keyword">go</span> test ./... -v</span><br><span class="line">=== RUN   TestCalculateIsArmstrong</span><br><span class="line">--- PASS: TestCalculateIsArmstrong (<span class="number">0.00</span>s)</span><br><span class="line">=== RUN   TestNegativeCalculateIsArmstrong</span><br><span class="line">--- PASS: TestNegativeCalculateIsArmstrong (<span class="number">0.00</span>s)</span><br><span class="line">PASS</span><br><span class="line">ok      awesomeProject1/calculator      <span class="number">0.193</span>s</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> test </category>
+          <category> Software Development </category>
           
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>My New Post</title>
-      <link href="/2022/05/17/My-New-Post/"/>
-      <url>/2022/05/17/My-New-Post/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>465466546</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2022/05/17/test/"/>
-      <url>/2022/05/17/test/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/05/17/hello-world/"/>
-      <url>/2022/05/17/hello-world/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> he </category>
+          <category> Test </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> heloo </tag>
+            <tag> golang </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2019/12/21合歡溪谷之小嘆息灣</title>
-      <link href="/2020/01/19/hike/"/>
-      <url>/2020/01/19/hike/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前看著我弟去爬筆架尖山，自己就一直也想去體驗看看，但是我也知道登山是需要有經驗夥伴的，非常感謝高中麻吉 Frank ，告訴我成大山協的資訊，讓我有機會踏入山野玩耍的機會!!</p><h2 id="成員一覽"><a href="#成員一覽" class="headerlink" title="成員一覽"></a>成員一覽</h2><div class="fj-gallery"><p><img src="https://i.imgur.com/jbVSfl6.jpg" alt="A"><br><img src="https://i.imgur.com/T5gMrgc.jpg" alt="B"><br><img src="https://i.imgur.com/qnmRrEx.jpg" alt="C"><br><img src="https://i.imgur.com/dHjSyah.jpg" alt="D"><br><img src="https://i.imgur.com/vI8YXia.jpg" alt="E"><br><img src="https://i.imgur.com/r4s9PVD.jpg" alt="F"><br><img src="https://i.imgur.com/mtXSr4x.jpg" alt="G"><br><img src="https://i.imgur.com/zeERqn8.jpg" alt="H"><br><img src="https://i.imgur.com/1yyxfVD.jpg" alt="I"><br><img src="https://i.imgur.com/aj9uGLf.jpg" alt="J"><br><img src="https://i.imgur.com/8QhgrxT.jpg" alt="K"><br><img src="https://i.imgur.com/3sw2MmB.jpg" alt="L"><br><img src="https://i.imgur.com/ddUNxuU.jpg" alt="M"></p>          </div><h1 id="紀實"><a href="#紀實" class="headerlink" title="紀實"></a>紀實</h1><h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1 :"></a>Day 1 :</h2><p><img src="https://i.imgur.com/BRhggiS.jpg" alt="成大光復校區"><br>我們從光復校區做司機大哥的車子(大概有點像保母車)，一路開往石門山，約莫3個多小時的車程，途中大家都不認識，但是人都很大方，一路上就聊天和小睡一下時間就過去了~<br>到了石門山，真的冷，約莫攝氏2度吧~</p><p><img src="https://i.imgur.com/dLQgOYf.jpg" alt="J個溫度"></p><p>到了位置後，我們需要等上另一台車的兩個夥伴，所以就在小七買點東西吃，順便聊天，然後發現 Pokemon 的愛好者 - 庭茵，第一次見面總是會覺得他特別凶，可是相處久了就會發現其實是一個很可愛的人 </p><p>然後在小七我找到了愛吃煎餃的知音 - 碩凡，我還以為只有我愛吃小七的煎餃😮😮，除了價格比八方雲集低之外，份量也比較適合消夜，不會太多</p><p><img src="https://i.imgur.com/uHfwH16.jpg" alt="石門山附近的小七"></p><p>等到大家集合完畢，就上裝備準備前往石門山路口了，那邊的風真的超大，然後不曉得是不是太冷，整個超想上廁所，加上女生們一路聊天聊到半夜2點多，結果最後大概只有昏昏沉沉的淺眠到4點半，起來好累，但是好像要趕行程只好匆匆忙忙得快速收拾，準備上路</p><p><img src="https://i.imgur.com/tbLLGZc.jpg" alt="下車超冷阿"></p><p>這邊就要講一下我的崩潰事蹟了，就是我的手套放在書包的最下層，我只好放棄拿😱😱😱</p><h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2 :"></a>Day 2 :</h2><p><img src="https://i.imgur.com/keF49Tu.jpg" alt="夜路行走，又濕又冷"></p><p>早晨的路徑超黑，沒有頭燈可能我就GG了，基本上我都是跟著前方的光在走的，山路有時候蠻難走的，有些微結冰，容易腳打滑，突然會幻想，如果我會輕功就好了，然後好像有稍微迷路，或許是太黑還是領隊怡萱經驗比較少，不過很快就找到正確的方向了</p><p><img src="https://i.imgur.com/so6gEqK.jpg" alt="道阻且長"></p><p>當我們加快腳程經過哈哈山的時候，大家還在疑惑怎麼還沒看到哈哈山，後來我發現倒在腳邊的小木牌，寫著哈哈山，看來是原本的立牌壞了吧我猜~</p><p>這個時候我的手已經完全凍僵了，還有途中抓到的刺木叢，🤬🤬🤬🤬我的手正在哭阿</p><p>當我們從山脊穿越高的草叢，看到下切的景色的時候，真的是壯觀阿~ 山裡的美已經蓋過我的懼高了</p><p><img src="https://i.imgur.com/2uBfzHB.jpg" alt="冷阿美阿"></p><p><img src="https://i.imgur.com/ap7QfON.jpg" alt="別有洞天了嗎~"></p><p><img src="https://i.imgur.com/ANWYftJ.jpg" alt="下切的各位"></p><p><img src="https://i.imgur.com/dIN7lDT.jpg" alt="世外桃源"><br><img src="https://i.imgur.com/1b9CfJ0.jpg" alt="清澈的嘆息灣~"></p><p>我們在這邊稍作休息玩樂、還有拍照聊天</p><div class="fj-gallery"><p><img src="https://i.imgur.com/sJWt2Vu.jpg"><br><img src="https://i.imgur.com/TwMNDHR.jpg"><br><img src="https://i.imgur.com/agip9fF.jpg"><br><img src="https://i.imgur.com/BQ2wcdG.jpg"><br><img src="https://i.imgur.com/suM7RNP.jpg"><br><img src="https://i.imgur.com/zIvbKxa.jpg"><br><img src="https://i.imgur.com/k38VSE7.jpg"><br><img src="https://i.imgur.com/9YnHRUU.jpg"><br><img src="https://i.imgur.com/LEhXwbW.jpg"><br><img src="https://i.imgur.com/gPkXJBI.jpg"><br><img src="https://i.imgur.com/J4mTMQH.jpg"><br><img src="https://i.imgur.com/WisXRo6.jpg"><br><img src="https://i.imgur.com/cjHq8ji.jpg"></p>          </div><p>準備上切的時候，一直沒找到好的上切路徑，最後雖然找到了路，可惜的是來不及會師了 😭😭😭</p><p>最後決定直接折返，那天我們決定在河邊紮營~</p><p><img src="https://i.imgur.com/zo7PYG7.jpg" alt="這裡石頭多但是風比較少"></p><p><img src="https://i.imgur.com/lzfO95N.jpg"></p><p>很開心的一件事，就是今天開爐了，可以吃到相對正常的一餐，羊肉爐，打拋豬，蒙古鍋 🤤🤤🤤🤤</p><p>然後圍爐一起玩團康，更認識大家了，很天真爛漫的暄雅，愛情大師碩凡，調皮的蕭昱，一貫害羞的富嘉，活潑野孩子梓崴，看似外放卻內心細膩的庭茵，很愛笑而且帥氣的敬閔~~</p><p>在玩殺手的時候，或許大家都覺得我很怪? 或許是玩太多遊戲了，我喜歡讓其他人猜不透我，這樣我才有機會成為醬油高手 or 內奸? 也可能是星座的原因吧~~</p><div class="fj-gallery"><p><img src="https://i.imgur.com/Jadg0mQ.jpg" alt="吃鍋"><br><img src="https://i.imgur.com/oZSBnuS.jpg" alt="湯圓"></p>          </div><h2 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3 :"></a>Day 3 :</h2><p>隔天早上，真的睡超飽，雖然有些鐵腿，但是十分感激曹穎一大早就為我們煮了早餐 (泡麵)~ 好吃，前幾天的早餐都是甜甜的餅乾跟巧克力，終於吃到一點鹹的早餐了，有點爽的感覺</p><p>再來順便也煮了一鍋湯圓，看來大家都是大胃王阿</p><div class="fj-gallery"><p><img src="https://i.imgur.com/tBNbxul.jpg"><br><img src="https://i.imgur.com/UGU5ugx.jpg"><br><img src="https://i.imgur.com/1pLvg0x.jpg"></p>          </div><p><img src="https://i.imgur.com/P9P8UPu.jpg"><br>接著，我們就一路走回公路了~</p><p><img src="https://i.imgur.com/W2uqLPX.jpg" alt="看到公路拉~"></p><p>然後不得不提，登山杖真的是好用的東西啊，回程才發現 😰😰，有點沒力，風又好大超怕一個不小心跌倒~~<br>後來怡萱的袋子還被追走，最後厲害的司機大哥霸氣的撿回來👻👻</p><p>上了車子，真的好感動，司機大哥為我們準備了豬腳，餅乾，鹹鴨蛋，Fin，真的超~爽，累的時候就是要吃!!!</p><p>對了忘了提到一件事，暄雅回程的動力完全就是為了去泡溫泉阿，所以我們的車子就一路衝到溫泉館拉~~</p><p>來的這間溫泉真的 🙃🙃， 除了熱水器壞掉外，溫泉竟然是在浴缸內~ (傻眼貓咪)</p><p>不過薑茶跟提供房間讓我們休息還是挺棒的 💪💪💪💪</p><p>不得不佩服女生的活力，一路唱了一整個下午的歌，我跟碩凡就在旁邊聊天，有關 ptt 上面的故事啊之類的，富嘉已經累到去車上休息了</p><div class="fj-gallery"><p><img src="https://i.imgur.com/OjnagwW.jpg" alt="A"></p><p><img src="https://i.imgur.com/PwFmVWK.jpg" alt="B"></p><p><img src="https://i.imgur.com/bQqgNqF.jpg" alt="C"></p>          </div><p>最後在附近的餐廳享受此行的最後一餐，也跟大家聊了大家的第一印象，琬婷竟然跑掉，還真的是一個有個性的人呢~</p><h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>那天晚上的夜空特別的美，清澈的黑夜閃爍著好幾個星星，彷彿就像攝影師相機的閃光燈一樣，一閃一閃拍攝紀錄著我們這趟旅行的回憶。</p><p>時間會流逝，可是回憶能留下，感謝緣分~~</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lifestyle </category>
-          
-          <category> hike </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hike </tag>
+            <tag> unit test </tag>
             
         </tags>
       
@@ -141,25 +60,6 @@
     
     
     <entry>
-      <title>問與答 Q and A</title>
-      <link href="/2019/11/23/QandA/"/>
-      <url>/2019/11/23/QandA/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> QA </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>如何在部落格加入你的旅行足跡 How to add your footprint in your blog</title>
       <link href="/2019/11/23/blog/"/>
       <url>/2019/11/23/blog/</url>
@@ -187,33 +87,6 @@
     
     
     <entry>
-      <title>純分享歌單</title>
-      <link href="/2019/11/23/diary/"/>
-      <url>/2019/11/23/diary/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近這陣子都在忙著準備作品集，以及學習托福，感覺都快要瘋掉了，孤獨感一直上身</p><p>休息的時間竟然就loop了這首歌一整天阿</p><iframe width="100%" height="315" src="https://www.youtube.com/embed/Zug3-L36aqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Emi 真是活潑到讓我心情變的很開心呢~~</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lifestyle </category>
-          
-          <category> Diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> diary </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>更新日誌 Changelog</title>
       <link href="/2019/11/23/changelog/"/>
       <url>/2019/11/23/changelog/</url>
@@ -233,36 +106,9 @@
     
     
     <entry>
-      <title>試著一窺在港中國留學生的思維</title>
-      <link href="/2019/11/21/mur/"/>
-      <url>/2019/11/21/mur/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>偶然看到這個 <a href="https://blog.dlzhang.com/">斑斑碎碎念</a> 的 Blog，覺得甚有趣，於是就有了這篇</p><p><img src="https://i.imgur.com/povqMIj.png" alt="WOW"></p><p>其實我們一直以來都了解這幾家媒體的素質，只是沒想到中國學生也有這般思維，不過不知道她在香港會不會被扁(這是題外話XD)</p><p>話說他們一直叫我們彎彎還真的是不習慣，畢竟我對彎彎的理解都是一個 Line 貼圖的創作者</p><p><img src="https://i.imgur.com/UjzLQFS.gif" alt="彎彎"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lifestyle </category>
-          
-          <category> Murmuring </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> murmur </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>貨幣簡單模型 Monetary Simple Model</title>
-      <link href="/2019/11/21/eco_related/"/>
-      <url>/2019/11/21/eco_related/</url>
+      <link href="/2019/11/21/monetary_simple_model/"/>
+      <url>/2019/11/21/monetary_simple_model/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Overlapping-Generation-Models"><a href="#Overlapping-Generation-Models" class="headerlink" title="Overlapping Generation Models"></a>Overlapping Generation Models</h1><h2 id="OLG-model-—-疊代模型"><a href="#OLG-model-—-疊代模型" class="headerlink" title="(OLG) model — 疊代模型"></a>(OLG) model — 疊代模型</h2><h3 id="把人分成兩個時期"><a href="#把人分成兩個時期" class="headerlink" title="把人分成兩個時期"></a>把人分成兩個時期</h3><pre><code>年輕人老人</code></pre><h4 id="⭐把經濟體開始的時期訂為1"><a href="#⭐把經濟體開始的時期訂為1" class="headerlink" title="⭐把經濟體開始的時期訂為1"></a>⭐把經濟體開始的時期訂為1</h4><pre><code>    t ≧ 1    N(t) 代表t時期出生的人，這邊用來定義”年輕人”    N(t-1)代表t-1時期出生的人，這邊用來定義”老人”</code></pre><h4 id="⭐️把消耗品儲蓄數量定為y"><a href="#⭐️把消耗品儲蓄數量定為y" class="headerlink" title="⭐️把消耗品儲蓄數量定為y"></a>⭐️把消耗品儲蓄數量定為y</h4><p>只有年輕的時候可以獲得，老的時候無法獲得</p><h4 id="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。"><a href="#⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。" class="headerlink" title="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。"></a>⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。</h4><p>給定一時期的消費量，個體效益會隨著另一時期的消費量而增加。<br>兩個時期個體皆傾向消費正向的數量。<br>為了讓明天有更多的消費，個體願意放棄今日的消費(如果蘋果相對明天而言充足)。</p><blockquote><p>👉定義一個個體C(1, t)為年輕時的消費，C(2, t+1)為老年時的消費<br>👉假設時間不是關鍵的要素，則這兩時期訂為C(1)，C(2)。</p></blockquote><p><img src="https://cdn-images-1.medium.com/max/1000/1*o8hTw6Y8ZvN6fh_mRxxu9w.png" alt="(圖1)無異曲線，說明了在效益相同(utility)之下，C(1) 和C(2) 之間的關係，A, B, C效益都是一樣的。"></p><blockquote><p>圖1(白話來說如果只有年輕時賺錢，那麼你一輩子賺的錢就是固定的(效益utility)，年輕時 + 老年時花的錢，就等於效益)。</p></blockquote><p><img src="https://cdn-images-1.medium.com/max/1000/1*O57tQ_EHlCLyuWS8ufaxDA.png" alt="(圖2)此無異曲線，說明了假如固定一個時期的消費，那麼效益會隨著另一時期的消費增加而增加。"></p><blockquote><p>圖2 (白話而言，就是假設退休金相同的情況之下，年輕的時候想多花錢則年輕時賺的錢要越多(效益))。</p></blockquote><h4 id="⭐️定義經濟的問題"><a href="#⭐️定義經濟的問題" class="headerlink" title="⭐️定義經濟的問題"></a>⭐️定義經濟的問題</h4><pre><code>老人跟年輕人都想要得到good，但是只有在年輕的時候可以賺取消費品(無儲存性)可行的分配</code></pre><h4 id="⭐️假設年輕人只會儲蓄"><a href="#⭐️假設年輕人只會儲蓄" class="headerlink" title="⭐️假設年輕人只會儲蓄"></a>⭐️假設年輕人只會儲蓄</h4><pre><code>我們可以得到(社會上的消費品總額)(t) = N(t)．y</code></pre><h4 id="⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。"><a href="#⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。" class="headerlink" title="⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。"></a>⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。</h4><pre><code>i.e. 都是C(1, t)和 C(2, +1)    — 年輕人在 t 時期        (所有年輕人的消費)(t) = N(t) · C(1, t)    — 老人在 t 時期        (所有老人的消費)(t)=N(t-1) · C(2, t)</code></pre><blockquote><p>👊 我們現在可以來說明消費的現象<br>        N(t) · C(1, t) + N(t-1) · C(2, t) ≦ N(t) · y</p></blockquote><h4 id="⭐️假設人口數是固定的-i-e-N-t-x3D-N-∀t"><a href="#⭐️假設人口數是固定的-i-e-N-t-x3D-N-∀t" class="headerlink" title="⭐️假設人口數是固定的(i.e N(t) &#x3D; N, ∀t)"></a>⭐️假設人口數是固定的(i.e N(t) &#x3D; N, ∀t)</h4><pre><code>    C(1, t) + C(2, t) ≦ y</code></pre><h4 id="⭐️假設每個時期的消費是固定的-靜態分配"><a href="#⭐️假設每個時期的消費是固定的-靜態分配" class="headerlink" title="⭐️假設每個時期的消費是固定的(靜態分配)"></a>⭐️假設每個時期的消費是固定的(靜態分配)</h4><pre><code>    i.e : C(1, t) = C(1), C(2, t)= C(2), ∀t    C(1) + C(2) ≦ y    — 這呈現了非常簡單的線性等式模型 ∈ C(1), C(2)</code></pre><p><img src="https://cdn-images-1.medium.com/max/1000/1*rrXw_S6gMTA0iuKNYY48aA.jpeg" alt="(圖3)可行解的區域，呈現了可分配的消費資源。A點則是永遠無法達到的。"></p><h2 id="Golden-Rule-Allocation"><a href="#Golden-Rule-Allocation" class="headerlink" title="Golden Rule Allocation"></a>Golden Rule Allocation</h2><pre><code>現在我們疊加上之前所說的個體無異曲線到圖3中，我們可以觀察當靜態分配且人口數不變，也就是時間變數不影響的話，可行分配的最大效益為多少。</code></pre><p><img src="https://cdn-images-1.medium.com/max/1000/1*W9SsDh_NoOGUURrwa21SsA.jpeg" alt="(圖4)Golden rule 我們可以發現 A 為最大福祉。"></p><blockquote><p>圖4，社會生產數額(A曲線)在每一個時期都大於總消費額(y線)，所以只有A可以達到最大效益，在可行解中達到最大社會福祉。D生產過剩，而B，C則生產不足。如圖5</p></blockquote><p><img src="https://cdn-images-1.medium.com/max/1000/1*NnlUwDNRWu69gnkR0tgsOA.jpeg" alt="(圖5) B, C生產不足造成的社會損失。"></p><h3 id="Corollary"><a href="#Corollary" class="headerlink" title="Corollary:"></a>Corollary:</h3><pre><code>靜態分配，對於年輕人跟老人是一個均衡的消費分配，用(C(1*), C(2*))表示。 誰都不能多拿，經濟學家不能偏袒其中一個。</code></pre><h4 id="Decentralized-Solution"><a href="#Decentralized-Solution" class="headerlink" title="Decentralized Solution"></a>Decentralized Solution</h4><pre><code>上面區塊說明的都是集權控制下的分配結果，現在我們想討論的是如果市場自行分配的結果呢?</code></pre><h4 id="⭐️競爭下的平衡-equilibrium-特質有"><a href="#⭐️競爭下的平衡-equilibrium-特質有" class="headerlink" title="⭐️競爭下的平衡(equilibrium)特質有:"></a>⭐️競爭下的平衡(equilibrium)特質有:</h4><pre><code>個體間互相做有利的交易，透過交易，個體傾向取得能力所及的最大效益。價格跟數量必須沒有變化，也就說個體的行為對價格沒有效果。在任何市場中，供需平衡。</code></pre><h4 id="Equilibrium-without-Money"><a href="#Equilibrium-without-Money" class="headerlink" title="Equilibrium without Money"></a>Equilibrium without Money</h4><pre><code>思考一下如果在自由的市場當中，OLG 在我們的經濟體中，沒有money的話?在沒有集權控制之下，是否還可以達到我們之前所說的結果??這樣的交易是不可能存在的，t時期有年輕人跟老年人(t-1時期的年輕人)，如果從事交易，對於年輕人是沒有利益的。對於年輕人而言，老了之後，幾乎是沒有消費品儲蓄的，所以這樣的交易肯定是徒勞無功的。老人想要年輕人生產的消費品，可是老人並沒有年輕人想要的東西。所以，對於一個自給自足的個體，每個人都在年輕的時候把消費品花光光，沒有留下任何東西，所以這樣的效益是很低的。</code></pre><h4 id="Equilibrium-with-Money"><a href="#Equilibrium-with-Money" class="headerlink" title="Equilibrium with Money"></a>Equilibrium with Money</h4><pre><code>在經濟體中給定一個固定的Stock = M，最初的老人一共有N個，所以每個老人都有M/N個。那麼就可以開啟交易，年輕人用消費品跟老人交換貨幣，年輕人在用貨幣跟下個世代的年輕人交換。我們先定義一個單位的貨幣(flat money)相對於消費品的單位價值為V(t)，i.e.，年輕人需要放棄多少消費品來換取一元。相反過來的話，一個消費品多少錢則定義成P(t)。</code></pre><h4 id="⭐️An-Individual’s-Budget"><a href="#⭐️An-Individual’s-Budget" class="headerlink" title="⭐️An Individual’s Budget"></a>⭐️An Individual’s Budget</h4><pre><code>前面有講過一個人分成兩個時期，老年跟少年，在少年時期賺取y個消費品，個體可以吃掉，或者換取金錢。    第一時期(t)        多定義一個M(t)為在少年(t)時期所賺取的金額數        C(1, t) + V(t)M(t) ≦ y        年輕時共賺取y 消費品，在年輕的時候花了C(1, t)然後用V(t)個消費品換一元共換取了M(t)元    第二時期(t+1)        C(2, t+1) ≦ V(t+1) · M(t)        老年的時候，拿著年輕時換取的M(t)元去換取V(t+1)/per dollar 換取了消費品共V(t+1) · M(t)，為老年人最高的消費總額。        V(t) &gt; 0, ∀t，整理以上兩式        第二式 : M(t) ≧ (C(2, t+1))/(V(t+1)), 代入第一式        C(1, t) + [V(t) · C(2, t+1)/ V(t+1)] ≦ y        C(1, t) + (V(t)/ V(t+1))· C(2, t+1) ≦ y — — (2)</code></pre><p><img src="https://cdn-images-1.medium.com/max/1000/1*ByYdCZUHDo8QsNNnOlnOaA.jpeg" alt="(圖6) 表示上面方程式(2)的圖"></p><blockquote><p>V(t+1)&#x2F;V(t) 👉為金錢回報率</p></blockquote><h3 id="圖6，說明C-1-t-C-2-t-1-為最佳解"><a href="#圖6，說明C-1-t-C-2-t-1-為最佳解" class="headerlink" title="圖6，說明C(1*, t) , C(2*, t+1)為最佳解"></a>圖6，說明C(1*, t) , C(2*, t+1)為最佳解</h3><h4 id="stationary-monetary-equilibrium-靜態平衡之下"><a href="#stationary-monetary-equilibrium-靜態平衡之下" class="headerlink" title="stationary monetary equilibrium(靜態平衡之下)"></a>stationary monetary equilibrium(靜態平衡之下)</h4><pre><code>兩世代的消費總額不受t影響，C(1) + V(t+1)/V(t) · C(2) =y</code></pre><h4 id="⭐️帶入個體之後"><a href="#⭐️帶入個體之後" class="headerlink" title="⭐️帶入個體之後"></a>⭐️帶入個體之後</h4><p>N(t) · (y-C(1, t))，為經濟體所需的金錢數額</p><blockquote><p>👆t時期出生的每個年輕人有N(t)個人，一輩子賺取的消費品有y，扣掉年輕時期所花掉的消費額之後剩下的數額。i.e.經濟體總需要的金額。<br>    V(t)M(t) &#x3D; N(t) · (y-C(1, t))<br>    V(t) &#x3D; N(t) · (y-C(1, t)) &#x2F; M(t)<br>    同理t+1時期<br>    V(t+1) &#x3D; N(t+1) · (y-C(1, t+1)) &#x2F; M(t+1)<br>    合併兩式</p></blockquote><p><img src="https://cdn-images-1.medium.com/max/1000/1*f4HV25WVIfgdLA3xbEZJRg.jpeg"></p><h5 id="我們假設，兩個時代出生的人數是相同的，N-t-x3D-N-t-1-，然後換取的金額數也相同，M-t-1-x3D-M-t-，做一下消去"><a href="#我們假設，兩個時代出生的人數是相同的，N-t-x3D-N-t-1-，然後換取的金額數也相同，M-t-1-x3D-M-t-，做一下消去" class="headerlink" title="我們假設，兩個時代出生的人數是相同的，N(t) &#x3D; N(t+1)，然後換取的金額數也相同，M(t+1) &#x3D; M(t)，做一下消去"></a>我們假設，兩個時代出生的人數是相同的，N(t) &#x3D; N(t+1)，然後換取的金額數也相同，M(t+1) &#x3D; M(t)，做一下消去</h5><p><img src="https://cdn-images-1.medium.com/max/1000/1*MPK0JyOrtAsaMwTBiHfPJA.jpeg"></p><blockquote><p>圖(7) 如果人口跟貨幣供給都固定的話，會呈現上圖</p></blockquote><blockquote><p>圖6跟圖7是一樣的表示，靜態貨幣模型式遵守Golden Rule 的。</p></blockquote>]]></content>
       
@@ -281,35 +127,6 @@
             <tag> model </tag>
             
             <tag> olg </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>馬拉松初體驗 First time for Marathon</title>
-      <link href="/2019/11/21/ml_related/"/>
-      <url>/2019/11/21/ml_related/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>體力耍廢了一年後，決定重新開始努力，半馬算是一個給自己的檢定考</p><p>風景算是不錯，鄉村的景色，有灌溉農田的渠道，途中經過南部科學園區，人煙真是稀少 XD</p><p>路上經過<br><img src="https://1.bp.blogspot.com/-ys4NTttPZKI/XPPsozlMiVI/AAAAAAAAA9w/Ck2d5eBghCAnbUV3qmGxeeuJTMytyWmEwCLcBGAs/s640/bf705e51253c9fe34789b78f52b9d9b5.jpg" alt="TSMC"></p><p>在10 k 的時候突然下大雨，那時候經過一個小步道，我非常的喜歡，好像在一個隱居人士散步的場所</p><p><img src="https://1.bp.blogspot.com/-LkXImXPy8Og/XPPsNkR3WmI/AAAAAAAAA9o/jcf2k_nQ8WMfuzFJRmZeaaoLg_5_Mcd-QCLcBGAs/s640/600_212.jpg" alt="清幽小徑"></p><p>雖然在跑道18 k的時候有點抽筋，吃了兩顆鹽錠，不過最後總算是撐完全程，算是給自己了解到體能下降的程度，希望給自己幾個月的時間去自主訓練，慢慢地恢復</p><p>最後我完成了</p><p><img src="https://1.bp.blogspot.com/-uOC2lx3MiaA/XPPoDgDMegI/AAAAAAAAA9I/CmPQUTOb0pESPipQxXWz0Qh1wFHY0BPHACLcBGAs/s640/photo_2019-06-02_23-07-5344.jpg" alt="Finished"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lifestyle </category>
-          
-          <category> Marathon </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> marathon </tag>
-            
-            <tag> life </tag>
             
         </tags>
       
@@ -347,40 +164,11 @@
     
     
     <entry>
-      <title>Fizz 操作心得</title>
-      <link href="/2019/11/21/lol_related/"/>
-      <url>/2019/11/21/lol_related/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>在我入坑這個遊戲的那段時間，非常崇拜西門，而他的本命腳色又是飛斯，所以這是我花最多時間操作的腳色，也是最喜歡的腳色。</p></blockquote><blockquote><p>首先，他經歷過好幾個版本的變動，但是不變的是，使用的核心能力: 守株待兔，跑線支援。</p></blockquote><p>當然，最基本的東西，就是<span style="border-bottom:2px dashed yellow;">基本功</span>跟<span style="border-bottom:2px dashed yellow;">練習對應出裝備</span>:</p><p>這個的話，基本上，去 <a href="https://www.op.gg/champion/fizz/statistics/mid/">OPGG</a> 官網可以有收穫，跟著前輩走絕對是對的。</p><p>另外，基本功就是尾刀的技術，這個就是熟練度了，開啟自訂模式可以得到很好的練習，基本上遊戲時間如果 10分鐘，基本上就要尾 100 刀，才算合格。大概就是 1 : 10。</p><p>當然飛斯最好尾刀的是塔下小兵，對線弱勢的時候，儘量讓兵線控制在塔附近，如果塔下的話，基本上進程小兵讓塔打兩下普攻就尾刀成功了，遠程小兵讓塔打一下然後開 W 尾刀。</p><p>對線技巧的話，可以多看職業選手的影片，學習內化，有時候就會派上用場。</p><p>再來我就要講核心了~~</p><h4 id="守株待兔"><a href="#守株待兔" class="headerlink" title="守株待兔:"></a>守株待兔:</h4><p>飛斯這個英雄，最厲害的就是瞬間爆發傷害很高，又十分靈活，最強勢算是遊戲中期。<br>所以基本上，想辦法趕快出好核心裝備跟減 CD 的裝備，就儘量多跑線，這個目的是讓對方根本抓不到你的位置，然後儘量去排對方的眼位，然後有時候蹲一下對方野區的草叢，有時候機會就會上門了。</p><p>最好的結果是，你的對線功夫很強，在線上打爆對方，或是蹲對方 JG 很多次，讓對方 JG 沒有作用，又或是跑線都起作用，讓對方其他線路崩盤。</p><p>最糟的結果是，眼位沒排乾淨，最後就是你常常浪費時間做徒勞無功的事情，最後經濟差距拉大，遊戲時間拉長，你就沒有辦法有所作為。</p><h4 id="跑線支援"><a href="#跑線支援" class="headerlink" title="跑線支援:"></a>跑線支援:</h4><p>飛斯這個英雄有個特性就是靈活，有位移又本身自帶免疫技能 E ，妥善利用的話，常常對方想要圍毆對友的時候，你兩三下就趕到肇事現場了，因為你自身帶很大的傷害，對方不一定敢作開戰。</p><p>掌握這兩個重要的技能，基本上在遊戲中就可以有很大的作用了，再來就是經驗的累積了，個人是不太建議微操越塔操作，因為基本上要一個人靠微操 carry 整個遊戲，實在太過困難了，更何況微操失誤率更高，一次兩次的失誤，可能就不能玩了。</p><p>BTW 狗狗飛斯的造型真的很可愛 : D</p><p><img src="https://1.bp.blogspot.com/-F_XpYaajbEw/XOz0HvVw2vI/AAAAAAAAA6o/5lQ-CFPaqjo2MhDOixGH469JUvf5lsQCgCK4BGAYYCw/s400/Fizz_14%2B%25281%2529.jpg" alt="狗狗飛斯造型"></p><h4 id="我的福文"><a href="#我的福文" class="headerlink" title="我的福文:"></a>我的福文:</h4><p>通常就這兩個吧，上面的算通用的，下面是想疊傷害的</p><p><img src="https://1.bp.blogspot.com/-qnI1a-_ieHA/XQ0C2LEf1zI/AAAAAAAABDM/Gk1N04dN5MsmJdeqXfIYJW2uzLSY9WAxgCLcBGAs/s640/%25E6%25A1%258C%25E9%259D%25A2.PNG" alt="符文 1"></p><p><img src="https://1.bp.blogspot.com/-gMrfWBx1HsA/XQ0C3zhhiQI/AAAAAAAABDQ/iqJRgBNdjZoklTqhhTH2qzG3Yb-Sc4rwQCLcBGAs/s640/%25E6%2593%25B7%25E5%258F%25961.PNG" alt="符文 2"></p><h4 id="出莊思路"><a href="#出莊思路" class="headerlink" title="出莊思路:"></a>出莊思路:</h4><p>出門就汙濁藥劑，第一次回程出小疊書 + 小鞋子 + 紅眼</p><h4 id="核心裝備"><a href="#核心裝備" class="headerlink" title="核心裝備"></a>核心裝備</h4><blockquote><p>保命: 中亞沙漏</p></blockquote><blockquote><p>傷害: 黑魔禁書、黎安卓的折磨、虛空之杖</p></blockquote><blockquote><p>洗冰: 海科斯腰帶、海克斯科技 GLP-800、盧登的回音</p></blockquote><ol><li><p>保命:</p><p> 中亞沙漏肯定是必出的裝備，這不僅大大的提升飛斯的靈活度也幫助了他在打架存活的程度，因為飛斯的精隨就是靈活調皮、可進可出</p></li><li><p>傷害:</p><p> 遊戲難免會拖到後期，別人防裝出起來，你可能就會打醬油沒傷害，所以這邊前期出完，可以確保前後期都有一定的輸出</p></li></ol><h3 id="這-3-件我通常得出法是這樣"><a href="#這-3-件我通常得出法是這樣" class="headerlink" title="這 3 件我通常得出法是這樣"></a>這 3 件我通常得出法是這樣</h3><p>對面有厄薩斯、歐拉夫……回寫多的腳色  &gt;&gt;&gt; 黑魔禁書<br>有科加斯、賽恩……血多到不行的腳色 &gt;&gt;&gt; 黎安卓的折磨<br>遇到對面沒有坦克腳色 &gt;&gt;&gt; 會考慮出虛空之杖<br>其他: 我通常順風出黑魔禁書，逆風就黑魔加黎安卓的折磨</p><ol start="3"><li><p>洗冰:</p><blockquote><p>飛斯再傷害成型之前吃冰是不快的，這樣一來非常不好單帶，但是隊友通常會需要靈活不容易死的腳色去單帶一線，所以洗冰裝備是必須的。</p></blockquote></li></ol><p>我簡單分成三種 case:</p><h3 id="case1"><a href="#case1" class="headerlink" title="case1:"></a>case1:</h3><p>你的操作已經在對線上屌打對手了，而且你帶點燃加閃現<br>我覺得不用考慮了，就是出爐燈的回音，至於為甚麼呢? 因為飛斯說穿了是一隻雪球腳色，當雪球滾起來，他才容易有操作的表現，那麼傷害的推疊就非常的重要，通常可以搭配死帽 or 疊書使用，當然超順風的話，就都出也可以~~</p><h3 id="case2"><a href="#case2" class="headerlink" title="case2:"></a>case2:</h3><p>對線上 5.5 開 or 你帶 傳送 +閃現</p><p>我會在分成兩種狀況</p><h4 id="condition1"><a href="#condition1" class="headerlink" title="condition1 :"></a>condition1 :</h4><p>遇上刺客:  海科斯腰帶<br>畢竟你已經5.5開了，遇上刺客很容易被GK就一套被帶走，所以血量對你來說蠻重要的，也可以幫助你增加換血的能力。</p><h4 id="condition2"><a href="#condition2" class="headerlink" title="condition2 :"></a>condition2 :</h4><p>遇上法師: 海克斯科技 GLP-800<br>因為法師通常在前期傷害不夠一套帶走你，所以通常都是對你進行騷擾，而你面對騷擾，需要的是魔力來進行更多的換血機會</p><h3 id="case3"><a href="#case3" class="headerlink" title="case3:"></a>case3:</h3><div class="note warning flat"><p>對線上3.7或者 極劣勢 </p></div><blockquote><p>這時候只能出 海科斯腰帶了，你不出這個大概被殺爆吧</p></blockquote><p>核心裝備出完，你大概會有 20% -CD</p><p>那麼基本上我的飛斯一定會讓他滿CD，為了就是增加靈活性</p><p>那可以考慮的裝備有 愛歐尼亞之靴、巫妖之禍、女妖面紗…..這部分看個人喜好</p><div class="note warning flat"><p>例外狀況:</p></div><p>遇上勒布朗我會多一件核心裝備 &gt;&gt;&gt; 深淵面具<br>遇到CC多的局我會多一件核心裝備 &gt;&gt;&gt; 女妖面紗</p><h3 id="最後裝備"><a href="#最後裝備" class="headerlink" title="最後裝備:"></a>最後裝備:</h3><h4 id="順風我通常都是"><a href="#順風我通常都是" class="headerlink" title="順風我通常都是:"></a>順風我通常都是:</h4><blockquote><p>盧登的回音 + 死亡之帽 + 黑魔禁書 + 中亞沙漏 + cd 鞋 + 疊書<br>盧登的回音 + 死亡之帽 + 黑魔禁書 + 中亞沙漏 + cd 鞋 + 煉魔渾儀</p></blockquote><h4 id="逆風通常都是"><a href="#逆風通常都是" class="headerlink" title="逆風通常都是:"></a>逆風通常都是:</h4><blockquote><p>盧登的回音跟疊書改成 海科斯腰帶 + 女妖面紗 or 黎安卓的折磨</p></blockquote><p>我個人篇好在對線上取得優勢，所以我都不帶傳送的，打法跟出裝也都偏向對線，畢竟單排不一定會有JG幫你滾雪球，你必須靠自己滾雪球，所以我的出莊未必是主流的出法</p><div class="note info flat"><p>我覺得記住三個點通常可以拿到滾雪球的機會</p></div><p>有時候可以裝笨，讓對手浪，一旦出現失誤，就是你的機會<br>蹲點，把自己想成 cs 的狙擊手，把冰線洗完有機會就蹲人<br>運用靈活度跑線支援，飛斯跑線真的很快，只要支援通常可以撿到便宜，讓自己滾雪球的機會</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lifestyle </category>
-          
-          <category> Esport </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> fizz </tag>
-            
-            <tag> lol </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Sitemap</title>
+      <title>網站導覽 Sitemap</title>
       <link href="/2019/11/20/sitemap/"/>
       <url>/2019/11/20/sitemap/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note info flat"><p>網站努力架置中， 目前版本 0.1.1  </p></div><div class="note danger flat"><p>目前朝著數據分析與前端設計的方向努力學習</p></div><div class="note warning flat"><p>除了分享朋友的粉專連結，偶爾也當個文人墨客抒發一點騷味拉</p></div><div class="note success flat"><p>部落格中有任何錯誤或建議歡迎在討論板或粉專留言，謝謝：）</p></div><h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>歡迎來到本站，這裡是本站的網站地圖，第一次來的訪客一定要仔細閱讀這篇喔 : )</p><p>隨著本站的文章篇數增加，系統性的瀏覽需求日增，因此規劃了四個主要頁面－分別是 <a href="https://kaidloglife.netlify.app/about/">關於我 (About)</a>、<a href="https://kaidloglife.netlify.app/2019/11/20/sitemap/">網站導覽 (Sitemap)</a>、<a href="https://daekony.github.io/2019/11/23/QandA/">常見問題 (Q &amp; A)</a> 和 <a href="https://daekony.github.io/2019/11/23/changelog/">更新日誌 (Changelog)</a>。</p><p>而本篇為網站導覽，提供大家方便理解本站內容架構，你可以把這裡視為後設目錄 (meta-catalogue)，也就是本站系列文目錄的目錄。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note info flat"><p>網站努力架置中， 目前版本 0.1.1  </p></div><div class="note danger flat"><p>目前朝著數據分析與前端設計的方向努力學習</p></div><div class="note warning flat"><p>除了分享朋友的粉專連結，偶爾也當個文人墨客抒發一點騷味拉</p></div><div class="note success flat"><p>部落格中有任何錯誤或建議歡迎在討論板或粉專留言，謝謝：）</p></div><h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>歡迎來到本站，這裡是本站的網站地圖，第一次來的訪客一定要仔細閱讀這篇喔 : )</p><p>隨著本站的文章篇數增加，系統性的瀏覽需求日增，因此規劃了四個主要頁面－分別是 <a href="https://daekony.github.io/about/">關於我 (About)</a>、<a href="https://daekony.github.io/2019/11/20/sitemap/">網站導覽 (Sitemap)</a>、<a href="https://daekony.github.io/2019/11/23/QandA/">常見問題 (Q &amp; A)</a> 和 <a href="https://daekony.github.io/2019/11/23/changelog/">更新日誌 (Changelog)</a>。</p><p>而本篇為網站導覽，提供大家方便理解本站內容架構，你可以把這裡視為後設目錄 (meta-catalogue)，也就是本站系列文目錄的目錄。</p>]]></content>
       
       
       

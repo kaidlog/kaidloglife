@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>貨幣簡單模型 Monetary Simple Model | KaidlogLife</title><meta name="keywords" content="model,olg"><meta name="author" content="Cheng Kai(Nicholas) Cheng"><meta name="copyright" content="Cheng Kai(Nicholas) Cheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Overlapping Generation Models(OLG) model — 疊代模型把人分成兩個時期年輕人 老人  ⭐把經濟體開始的時期訂為1    t ≧ 1     N(t) 代表t時期出生的人，這邊用來定義”年輕人”     N(t-1)代表t-1時期出生的人，這邊用來定義”老人”  ⭐️把消耗品儲蓄數量定為y只有年輕的時候可以獲得，老的時候無法獲得 ⭐️疊代模型中，說明老人與年輕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="貨幣簡單模型 Monetary Simple Model">
+<meta property="og:url" content="http://example.com/2019/11/21/monetary_simple_model/index.html">
+<meta property="og:site_name" content="KaidlogLife">
+<meta property="og:description" content="Overlapping Generation Models(OLG) model — 疊代模型把人分成兩個時期年輕人 老人  ⭐把經濟體開始的時期訂為1    t ≧ 1     N(t) 代表t時期出生的人，這邊用來定義”年輕人”     N(t-1)代表t-1時期出生的人，這邊用來定義”老人”  ⭐️把消耗品儲蓄數量定為y只有年輕的時候可以獲得，老的時候無法獲得 ⭐️疊代模型中，說明老人與年輕">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1.bp.blogspot.com/--IbP4vcNglY/XOuWoK6DQKI/AAAAAAAAA2c/-eFsCWBHVHgY4O4tBeVQO22Kp6ia0NFtgCK4BGAYYCw/s640/money-gold-monetary-policy.jpg">
+<meta property="article:published_time" content="2019-11-21T13:32:45.000Z">
+<meta property="article:modified_time" content="2022-05-17T19:21:33.859Z">
+<meta property="article:author" content="Cheng Kai(Nicholas) Cheng">
+<meta property="article:tag" content="model">
+<meta property="article:tag" content="olg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1.bp.blogspot.com/--IbP4vcNglY/XOuWoK6DQKI/AAAAAAAAA2c/-eFsCWBHVHgY4O4tBeVQO22Kp6ia0NFtgCK4BGAYYCw/s640/money-gold-monetary-policy.jpg"><link rel="shortcut icon" href="https://i.imgur.com/9bsJBDO.png"><link rel="canonical" href="http://example.com/2019/11/21/monetary_simple_model/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '貨幣簡單模型 Monetary Simple Model',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-18 03:21:33'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="KaidlogLife" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.imgur.com/MMQsfsJ.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://1.bp.blogspot.com/--IbP4vcNglY/XOuWoK6DQKI/AAAAAAAAA2c/-eFsCWBHVHgY4O4tBeVQO22Kp6ia0NFtgCK4BGAYYCw/s640/money-gold-monetary-policy.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">KaidlogLife</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">貨幣簡單模型 Monetary Simple Model</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2019-11-21T13:32:45.000Z" title="Created 2019-11-21 21:32:45">2019-11-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-05-17T19:21:33.859Z" title="Updated 2022-05-18 03:21:33">2022-05-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Commerce/">Commerce</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Commerce/Economics/">Economics</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="貨幣簡單模型 Monetary Simple Model"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Overlapping-Generation-Models"><a href="#Overlapping-Generation-Models" class="headerlink" title="Overlapping Generation Models"></a>Overlapping Generation Models</h1><h2 id="OLG-model-—-疊代模型"><a href="#OLG-model-—-疊代模型" class="headerlink" title="(OLG) model — 疊代模型"></a>(OLG) model — 疊代模型</h2><h3 id="把人分成兩個時期"><a href="#把人分成兩個時期" class="headerlink" title="把人分成兩個時期"></a>把人分成兩個時期</h3><pre><code>年輕人
+老人
+</code></pre>
+<h4 id="⭐把經濟體開始的時期訂為1"><a href="#⭐把經濟體開始的時期訂為1" class="headerlink" title="⭐把經濟體開始的時期訂為1"></a>⭐把經濟體開始的時期訂為1</h4><pre><code>    t ≧ 1
+    N(t) 代表t時期出生的人，這邊用來定義”年輕人”
+    N(t-1)代表t-1時期出生的人，這邊用來定義”老人”
+</code></pre>
+<h4 id="⭐️把消耗品儲蓄數量定為y"><a href="#⭐️把消耗品儲蓄數量定為y" class="headerlink" title="⭐️把消耗品儲蓄數量定為y"></a>⭐️把消耗品儲蓄數量定為y</h4><p>只有年輕的時候可以獲得，老的時候無法獲得</p>
+<h4 id="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。"><a href="#⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益-utility-取決於老人與年輕人的消費組合。" class="headerlink" title="⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。"></a>⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。</h4><p>給定一時期的消費量，個體效益會隨著另一時期的消費量而增加。<br>兩個時期個體皆傾向消費正向的數量。<br>為了讓明天有更多的消費，個體願意放棄今日的消費(如果蘋果相對明天而言充足)。</p>
+<blockquote>
+<p>👉定義一個個體C(1, t)為年輕時的消費，C(2, t+1)為老年時的消費<br>👉假設時間不是關鍵的要素，則這兩時期訂為C(1)，C(2)。</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*o8hTw6Y8ZvN6fh_mRxxu9w.png" alt="(圖1)無異曲線，說明了在效益相同(utility)之下，C(1) 和C(2) 之間的關係，A, B, C效益都是一樣的。"></p>
+<blockquote>
+<p>圖1(白話來說如果只有年輕時賺錢，那麼你一輩子賺的錢就是固定的(效益utility)，年輕時 + 老年時花的錢，就等於效益)。</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*O57tQ_EHlCLyuWS8ufaxDA.png" alt="(圖2)此無異曲線，說明了假如固定一個時期的消費，那麼效益會隨著另一時期的消費增加而增加。"></p>
+<blockquote>
+<p>圖2 (白話而言，就是假設退休金相同的情況之下，年輕的時候想多花錢則年輕時賺的錢要越多(效益))。</p>
+</blockquote>
+<h4 id="⭐️定義經濟的問題"><a href="#⭐️定義經濟的問題" class="headerlink" title="⭐️定義經濟的問題"></a>⭐️定義經濟的問題</h4><pre><code>老人跟年輕人都想要得到good，但是只有在年輕的時候可以賺取消費品(無儲存性)
+可行的分配
+</code></pre>
+<h4 id="⭐️假設年輕人只會儲蓄"><a href="#⭐️假設年輕人只會儲蓄" class="headerlink" title="⭐️假設年輕人只會儲蓄"></a>⭐️假設年輕人只會儲蓄</h4><pre><code>我們可以得到
+(社會上的消費品總額)(t) = N(t)．y
+</code></pre>
+<h4 id="⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。"><a href="#⭐️假設在t出生的個體-簡稱t世代-，每個個體，都有相同的終身分配數額。" class="headerlink" title="⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。"></a>⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。</h4><pre><code>i.e. 都是C(1, t)和 C(2, +1)
+    — 年輕人在 t 時期
+        (所有年輕人的消費)(t) = N(t) · C(1, t)
+    — 老人在 t 時期
+        (所有老人的消費)(t)=N(t-1) · C(2, t)
+</code></pre>
+<blockquote>
+<p>👊 我們現在可以來說明消費的現象<br>        N(t) · C(1, t) + N(t-1) · C(2, t) ≦ N(t) · y</p>
+</blockquote>
+<h4 id="⭐️假設人口數是固定的-i-e-N-t-x3D-N-∀t"><a href="#⭐️假設人口數是固定的-i-e-N-t-x3D-N-∀t" class="headerlink" title="⭐️假設人口數是固定的(i.e N(t) &#x3D; N, ∀t)"></a>⭐️假設人口數是固定的(i.e N(t) &#x3D; N, ∀t)</h4><pre><code>    C(1, t) + C(2, t) ≦ y
+</code></pre>
+<h4 id="⭐️假設每個時期的消費是固定的-靜態分配"><a href="#⭐️假設每個時期的消費是固定的-靜態分配" class="headerlink" title="⭐️假設每個時期的消費是固定的(靜態分配)"></a>⭐️假設每個時期的消費是固定的(靜態分配)</h4><pre><code>    i.e : C(1, t) = C(1), C(2, t)= C(2), ∀t
+    C(1) + C(2) ≦ y
+    — 這呈現了非常簡單的線性等式模型 ∈ C(1), C(2)
+</code></pre>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*rrXw_S6gMTA0iuKNYY48aA.jpeg" alt="(圖3)可行解的區域，呈現了可分配的消費資源。A點則是永遠無法達到的。"></p>
+<h2 id="Golden-Rule-Allocation"><a href="#Golden-Rule-Allocation" class="headerlink" title="Golden Rule Allocation"></a>Golden Rule Allocation</h2><pre><code>現在我們疊加上之前所說的個體無異曲線到圖3中，我們可以觀察當靜態分配且人口數不變，也就是時間變數不影響的話，可行分配的最大效益為多少。
+</code></pre>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*W9SsDh_NoOGUURrwa21SsA.jpeg" alt="(圖4)Golden rule 我們可以發現 A 為最大福祉。"></p>
+<blockquote>
+<p>圖4，社會生產數額(A曲線)在每一個時期都大於總消費額(y線)，所以只有A可以達到最大效益，在可行解中達到最大社會福祉。D生產過剩，而B，C則生產不足。如圖5</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*NnlUwDNRWu69gnkR0tgsOA.jpeg" alt="(圖5) B, C生產不足造成的社會損失。"></p>
+<h3 id="Corollary"><a href="#Corollary" class="headerlink" title="Corollary:"></a>Corollary:</h3><pre><code>靜態分配，對於年輕人跟老人是一個均衡的消費分配，用(C(1*), C(2*))表示。 誰都不能多拿，經濟學家不能偏袒其中一個。
+</code></pre>
+<h4 id="Decentralized-Solution"><a href="#Decentralized-Solution" class="headerlink" title="Decentralized Solution"></a>Decentralized Solution</h4><pre><code>上面區塊說明的都是集權控制下的分配結果，現在我們想討論的是如果市場自行分配的結果呢?
+</code></pre>
+<h4 id="⭐️競爭下的平衡-equilibrium-特質有"><a href="#⭐️競爭下的平衡-equilibrium-特質有" class="headerlink" title="⭐️競爭下的平衡(equilibrium)特質有:"></a>⭐️競爭下的平衡(equilibrium)特質有:</h4><pre><code>個體間互相做有利的交易，透過交易，個體傾向取得能力所及的最大效益。
+價格跟數量必須沒有變化，也就說個體的行為對價格沒有效果。
+在任何市場中，供需平衡。
+</code></pre>
+<h4 id="Equilibrium-without-Money"><a href="#Equilibrium-without-Money" class="headerlink" title="Equilibrium without Money"></a>Equilibrium without Money</h4><pre><code>思考一下如果在自由的市場當中，OLG 在我們的經濟體中，沒有money的話?在沒有集權控制之下，是否還可以達到我們之前所說的結果??
+這樣的交易是不可能存在的，t時期有年輕人跟老年人(t-1時期的年輕人)，如果從事交易，對於年輕人是沒有利益的。
+對於年輕人而言，老了之後，幾乎是沒有消費品儲蓄的，所以這樣的交易肯定是徒勞無功的。老人想要年輕人生產的消費品，可是老人並沒有年輕人想要的東西。
+所以，對於一個自給自足的個體，每個人都在年輕的時候把消費品花光光，沒有留下任何東西，所以這樣的效益是很低的。
+</code></pre>
+<h4 id="Equilibrium-with-Money"><a href="#Equilibrium-with-Money" class="headerlink" title="Equilibrium with Money"></a>Equilibrium with Money</h4><pre><code>在經濟體中給定一個固定的Stock = M，最初的老人一共有N個，所以每個老人都有M/N個。
+那麼就可以開啟交易，年輕人用消費品跟老人交換貨幣，年輕人在用貨幣跟下個世代的年輕人交換。
+我們先定義一個單位的貨幣(flat money)相對於消費品的單位價值為V(t)，i.e.，年輕人需要放棄多少消費品來換取一元。
+相反過來的話，一個消費品多少錢則定義成P(t)。
+</code></pre>
+<h4 id="⭐️An-Individual’s-Budget"><a href="#⭐️An-Individual’s-Budget" class="headerlink" title="⭐️An Individual’s Budget"></a>⭐️An Individual’s Budget</h4><pre><code>前面有講過一個人分成兩個時期，老年跟少年，在少年時期賺取y個消費品，個體可以吃掉，或者換取金錢。
+    第一時期(t)
+        多定義一個M(t)為在少年(t)時期所賺取的金額數
+        C(1, t) + V(t)M(t) ≦ y
+        年輕時共賺取y 消費品，在年輕的時候花了C(1, t)然後用V(t)個消費品換一元共換取了M(t)元
+    第二時期(t+1)
+        C(2, t+1) ≦ V(t+1) · M(t)
+        老年的時候，拿著年輕時換取的M(t)元去換取V(t+1)/per dollar 換取了消費品共V(t+1) · M(t)，為老年人最高的消費總額。
+        V(t) &gt; 0, ∀t，整理以上兩式
+        第二式 : M(t) ≧ (C(2, t+1))/(V(t+1)), 代入第一式
+        C(1, t) + [V(t) · C(2, t+1)/ V(t+1)] ≦ y
+        C(1, t) + (V(t)/ V(t+1))· C(2, t+1) ≦ y — — (2)
+</code></pre>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*ByYdCZUHDo8QsNNnOlnOaA.jpeg" alt="(圖6) 表示上面方程式(2)的圖"></p>
+<blockquote>
+<p>V(t+1)&#x2F;V(t) 👉為金錢回報率</p>
+</blockquote>
+<h3 id="圖6，說明C-1-t-C-2-t-1-為最佳解"><a href="#圖6，說明C-1-t-C-2-t-1-為最佳解" class="headerlink" title="圖6，說明C(1*, t) , C(2*, t+1)為最佳解"></a>圖6，說明C(1*, t) , C(2*, t+1)為最佳解</h3><h4 id="stationary-monetary-equilibrium-靜態平衡之下"><a href="#stationary-monetary-equilibrium-靜態平衡之下" class="headerlink" title="stationary monetary equilibrium(靜態平衡之下)"></a>stationary monetary equilibrium(靜態平衡之下)</h4><pre><code>兩世代的消費總額不受t影響，C(1) + V(t+1)/V(t) · C(2) =y
+</code></pre>
+<h4 id="⭐️帶入個體之後"><a href="#⭐️帶入個體之後" class="headerlink" title="⭐️帶入個體之後"></a>⭐️帶入個體之後</h4><p>N(t) · (y-C(1, t))，為經濟體所需的金錢數額</p>
+<blockquote>
+<p>👆t時期出生的每個年輕人有N(t)個人，一輩子賺取的消費品有y，扣掉年輕時期所花掉的消費額之後剩下的數額。i.e.經濟體總需要的金額。<br>    V(t)M(t) &#x3D; N(t) · (y-C(1, t))<br>    V(t) &#x3D; N(t) · (y-C(1, t)) &#x2F; M(t)<br>    同理t+1時期<br>    V(t+1) &#x3D; N(t+1) · (y-C(1, t+1)) &#x2F; M(t+1)<br>    合併兩式</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*f4HV25WVIfgdLA3xbEZJRg.jpeg"></p>
+<h5 id="我們假設，兩個時代出生的人數是相同的，N-t-x3D-N-t-1-，然後換取的金額數也相同，M-t-1-x3D-M-t-，做一下消去"><a href="#我們假設，兩個時代出生的人數是相同的，N-t-x3D-N-t-1-，然後換取的金額數也相同，M-t-1-x3D-M-t-，做一下消去" class="headerlink" title="我們假設，兩個時代出生的人數是相同的，N(t) &#x3D; N(t+1)，然後換取的金額數也相同，M(t+1) &#x3D; M(t)，做一下消去"></a>我們假設，兩個時代出生的人數是相同的，N(t) &#x3D; N(t+1)，然後換取的金額數也相同，M(t+1) &#x3D; M(t)，做一下消去</h5><p><img src="https://cdn-images-1.medium.com/max/1000/1*MPK0JyOrtAsaMwTBiHfPJA.jpeg"></p>
+<blockquote>
+<p>圖(7) 如果人口跟貨幣供給都固定的話，會呈現上圖</p>
+</blockquote>
+<blockquote>
+<p>圖6跟圖7是一樣的表示，靜態貨幣模型式遵守Golden Rule 的。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Cheng Kai(Nicholas) Cheng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2019/11/21/monetary_simple_model/">http://example.com/2019/11/21/monetary_simple_model/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/model/">model</a><a class="post-meta__tags" href="/tags/olg/">olg</a></div><div class="post_share"><div class="social-share" data-image="https://1.bp.blogspot.com/--IbP4vcNglY/XOuWoK6DQKI/AAAAAAAAA2c/-eFsCWBHVHgY4O4tBeVQO22Kp6ia0NFtgCK4BGAYYCw/s640/money-gold-monetary-policy.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/11/23/changelog/"><img class="prev-cover" src="https://resources.matcha-jp.com/archive_files/tw/2016/09/48bb50cf7ea22ce643d51f1190b665a8_m-1024x683.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">更新日誌 Changelog</div></div></a></div><div class="next-post pull-right"><a href="/2019/11/21/note/"><img class="next-cover" src="https://store-images.s-microsoft.com/image/apps.54771.63131787694667297.e786edde-5064-499d-9660-f3d7c293ceaa.fc6bab12-c6bc-451d-b5f9-5e128e481294?mode=scale&amp;q=90&amp;h=1080&amp;w=1920" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">個人筆記 Notes</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.imgur.com/MMQsfsJ.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cheng Kai(Nicholas) Cheng</div><div class="author-info__description">In persuit of those I am favor of</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/kaidlog"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kaidlog" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:kevinchengtn@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overlapping-Generation-Models"><span class="toc-number">1.</span> <span class="toc-text">Overlapping Generation Models</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OLG-model-%E2%80%94-%E7%96%8A%E4%BB%A3%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">(OLG) model — 疊代模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E4%BA%BA%E5%88%86%E6%88%90%E5%85%A9%E5%80%8B%E6%99%82%E6%9C%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">把人分成兩個時期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%E6%8A%8A%E7%B6%93%E6%BF%9F%E9%AB%94%E9%96%8B%E5%A7%8B%E7%9A%84%E6%99%82%E6%9C%9F%E8%A8%82%E7%82%BA1"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">⭐把經濟體開始的時期訂為1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E6%8A%8A%E6%B6%88%E8%80%97%E5%93%81%E5%84%B2%E8%93%84%E6%95%B8%E9%87%8F%E5%AE%9A%E7%82%BAy"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">⭐️把消耗品儲蓄數量定為y</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E7%96%8A%E4%BB%A3%E6%A8%A1%E5%9E%8B%E4%B8%AD%EF%BC%8C%E8%AA%AA%E6%98%8E%E8%80%81%E4%BA%BA%E8%88%87%E5%B9%B4%E8%BC%95%E4%BA%BA%E9%83%BD%E6%9C%83%E6%B6%88%E8%B2%BB%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%80%8B%E9%AB%94%E7%9A%84%E6%95%88%E7%9B%8A-utility-%E5%8F%96%E6%B1%BA%E6%96%BC%E8%80%81%E4%BA%BA%E8%88%87%E5%B9%B4%E8%BC%95%E4%BA%BA%E7%9A%84%E6%B6%88%E8%B2%BB%E7%B5%84%E5%90%88%E3%80%82"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">⭐️疊代模型中，說明老人與年輕人都會消費，因此個體的效益(utility)取決於老人與年輕人的消費組合。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%AE%9A%E7%BE%A9%E7%B6%93%E6%BF%9F%E7%9A%84%E5%95%8F%E9%A1%8C"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">⭐️定義經濟的問題</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%81%87%E8%A8%AD%E5%B9%B4%E8%BC%95%E4%BA%BA%E5%8F%AA%E6%9C%83%E5%84%B2%E8%93%84"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">⭐️假設年輕人只會儲蓄</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%81%87%E8%A8%AD%E5%9C%A8t%E5%87%BA%E7%94%9F%E7%9A%84%E5%80%8B%E9%AB%94-%E7%B0%A1%E7%A8%B1t%E4%B8%96%E4%BB%A3-%EF%BC%8C%E6%AF%8F%E5%80%8B%E5%80%8B%E9%AB%94%EF%BC%8C%E9%83%BD%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E7%B5%82%E8%BA%AB%E5%88%86%E9%85%8D%E6%95%B8%E9%A1%8D%E3%80%82"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">⭐️假設在t出生的個體(簡稱t世代)，每個個體，都有相同的終身分配數額。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%81%87%E8%A8%AD%E4%BA%BA%E5%8F%A3%E6%95%B8%E6%98%AF%E5%9B%BA%E5%AE%9A%E7%9A%84-i-e-N-t-x3D-N-%E2%88%80t"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">⭐️假設人口數是固定的(i.e N(t) &#x3D; N, ∀t)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%81%87%E8%A8%AD%E6%AF%8F%E5%80%8B%E6%99%82%E6%9C%9F%E7%9A%84%E6%B6%88%E8%B2%BB%E6%98%AF%E5%9B%BA%E5%AE%9A%E7%9A%84-%E9%9D%9C%E6%85%8B%E5%88%86%E9%85%8D"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">⭐️假設每個時期的消費是固定的(靜態分配)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Golden-Rule-Allocation"><span class="toc-number">1.2.</span> <span class="toc-text">Golden Rule Allocation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Corollary"><span class="toc-number">1.2.1.</span> <span class="toc-text">Corollary:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Decentralized-Solution"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">Decentralized Solution</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E7%AB%B6%E7%88%AD%E4%B8%8B%E7%9A%84%E5%B9%B3%E8%A1%A1-equilibrium-%E7%89%B9%E8%B3%AA%E6%9C%89"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">⭐️競爭下的平衡(equilibrium)特質有:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Equilibrium-without-Money"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">Equilibrium without Money</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Equilibrium-with-Money"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">Equilibrium with Money</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8FAn-Individual%E2%80%99s-Budget"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">⭐️An Individual’s Budget</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%966%EF%BC%8C%E8%AA%AA%E6%98%8EC-1-t-C-2-t-1-%E7%82%BA%E6%9C%80%E4%BD%B3%E8%A7%A3"><span class="toc-number">1.2.2.</span> <span class="toc-text">圖6，說明C(1*, t) , C(2*, t+1)為最佳解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#stationary-monetary-equilibrium-%E9%9D%9C%E6%85%8B%E5%B9%B3%E8%A1%A1%E4%B9%8B%E4%B8%8B"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">stationary monetary equilibrium(靜態平衡之下)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%AD%90%EF%B8%8F%E5%B8%B6%E5%85%A5%E5%80%8B%E9%AB%94%E4%B9%8B%E5%BE%8C"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">⭐️帶入個體之後</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%91%E5%80%91%E5%81%87%E8%A8%AD%EF%BC%8C%E5%85%A9%E5%80%8B%E6%99%82%E4%BB%A3%E5%87%BA%E7%94%9F%E7%9A%84%E4%BA%BA%E6%95%B8%E6%98%AF%E7%9B%B8%E5%90%8C%E7%9A%84%EF%BC%8CN-t-x3D-N-t-1-%EF%BC%8C%E7%84%B6%E5%BE%8C%E6%8F%9B%E5%8F%96%E7%9A%84%E9%87%91%E9%A1%8D%E6%95%B8%E4%B9%9F%E7%9B%B8%E5%90%8C%EF%BC%8CM-t-1-x3D-M-t-%EF%BC%8C%E5%81%9A%E4%B8%80%E4%B8%8B%E6%B6%88%E5%8E%BB"><span class="toc-number">1.2.2.2.1.</span> <span class="toc-text">我們假設，兩個時代出生的人數是相同的，N(t) &#x3D; N(t+1)，然後換取的金額數也相同，M(t+1) &#x3D; M(t)，做一下消去</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/17/unit_test_golang/" title="How to do unit test for golang program?"><img src="https://i.imgur.com/ean7S3b.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to do unit test for golang program?"/></a><div class="content"><a class="title" href="/2022/05/17/unit_test_golang/" title="How to do unit test for golang program?">How to do unit test for golang program?</a><time datetime="2022-05-17T13:40:13.457Z" title="Created 2022-05-17 21:40:13">2022-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/12/05/leetcode/" title="Leetcode 1"><img src="https://i.imgur.com/U4tOhlG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode 1"/></a><div class="content"><a class="title" href="/2019/12/05/leetcode/" title="Leetcode 1">Leetcode 1</a><time datetime="2019-12-05T14:51:24.000Z" title="Created 2019-12-05 22:51:24">2019-12-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/23/blog/" title="如何在部落格加入你的旅行足跡 How to add your footprint in your blog"><img src="https://i.imgur.com/GxNu6t4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何在部落格加入你的旅行足跡 How to add your footprint in your blog"/></a><div class="content"><a class="title" href="/2019/11/23/blog/" title="如何在部落格加入你的旅行足跡 How to add your footprint in your blog">如何在部落格加入你的旅行足跡 How to add your footprint in your blog</a><time datetime="2019-11-23T11:57:15.000Z" title="Created 2019-11-23 19:57:15">2019-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/23/changelog/" title="更新日誌 Changelog"><img src="https://resources.matcha-jp.com/archive_files/tw/2016/09/48bb50cf7ea22ce643d51f1190b665a8_m-1024x683.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更新日誌 Changelog"/></a><div class="content"><a class="title" href="/2019/11/23/changelog/" title="更新日誌 Changelog">更新日誌 Changelog</a><time datetime="2019-11-23T09:13:03.000Z" title="Created 2019-11-23 17:13:03">2019-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/21/monetary_simple_model/" title="貨幣簡單模型 Monetary Simple Model"><img src="https://1.bp.blogspot.com/--IbP4vcNglY/XOuWoK6DQKI/AAAAAAAAA2c/-eFsCWBHVHgY4O4tBeVQO22Kp6ia0NFtgCK4BGAYYCw/s640/money-gold-monetary-policy.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="貨幣簡單模型 Monetary Simple Model"/></a><div class="content"><a class="title" href="/2019/11/21/monetary_simple_model/" title="貨幣簡單模型 Monetary Simple Model">貨幣簡單模型 Monetary Simple Model</a><time datetime="2019-11-21T13:32:45.000Z" title="Created 2019-11-21 21:32:45">2019-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Cheng Kai(Nicholas) Cheng</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
