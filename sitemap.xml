@@ -153,14 +153,14 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/tags/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/changelog/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/tags/changelog/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/leetcode/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -209,6 +209,13 @@
   </url>
   
   <url>
+    <loc>https://kaidloglife.netlify.app/tags/tnfsh/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kaidloglife.netlify.app/tags/golang/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -217,13 +224,6 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/tags/unit-test/</loc>
-    <lastmod>2022-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/tnfsh/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -274,13 +274,6 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Test/</loc>
-    <lastmod>2022-05-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kaidloglife.netlify.app/categories/Commerce/Economics/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -288,14 +281,21 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/Nccu/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Test/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/tnfsh/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/NCCU/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/TNFSH/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
