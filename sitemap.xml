@@ -2,99 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/gin/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/django/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/docker/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/python/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/netlify/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/golang/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/git/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/18/java/</loc>
-    
-    <lastmod>2022-05-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kaidloglife.netlify.app/2019/12/05/as400/</loc>
     
-    <lastmod>2022-05-17</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/2012/11/23/tnfsh/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/21/hexo_note/</loc>
     
-    <lastmod>2022-05-17</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/2014/11/23/nccu/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/23/blog/</loc>
     
-    <lastmod>2022-05-17</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,43 +31,7 @@
   <url>
     <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
     
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2019/12/05/leetcode/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2019/11/20/sitemap/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/2019/11/21/note/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,14 +40,32 @@
   <url>
     <loc>https://kaidloglife.netlify.app/2019/11/23/changelog/</loc>
     
-    <lastmod>2022-05-17</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/2019/11/23/blog/</loc>
+    <loc>https://kaidloglife.netlify.app/2019/11/20/sitemap/</loc>
+    
+    <lastmod>2022-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/2022/05/19/pack_unit_test/</loc>
+    
+    <lastmod>2022-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/2022/05/17/unit_test_golang/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -234,6 +144,20 @@
   </url>
   
   <url>
+    <loc>https://kaidloglife.netlify.app/tags/markdown/</loc>
+    <lastmod>2022-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/tags/notes/</loc>
+    <lastmod>2022-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kaidloglife.netlify.app/tags/changelog/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -255,7 +179,7 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/tags/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/tags/sitemap/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -270,41 +194,6 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/tags/olg/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/nccu/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/markdown/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/notes/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/sitemap/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/tnfsh/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -327,56 +216,14 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Docker/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Test/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Blog/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Gozero/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Git/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Django/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Golang/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Java/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/leetcode/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/JavaScript/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,20 +237,6 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Netlify/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kaidloglife.netlify.app/categories/Software-Development/Markdown/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -411,35 +244,7 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Python/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Software-Development/Test/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kaidloglife.netlify.app/categories/Commerce/Economics/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/NCCU/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/categories/Lifestyle/TNFSH/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
