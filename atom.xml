@@ -6,7 +6,7 @@
   <link href="https://kaidloglife.netlify.app/atom.xml" rel="self"/>
   
   <link href="https://kaidloglife.netlify.app/"/>
-  <updated>2022-05-18T17:10:18.047Z</updated>
+  <updated>2022-05-18T18:11:28.470Z</updated>
   <id>https://kaidloglife.netlify.app/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What&#39;s the gozero structure?</title>
+    <link href="https://kaidloglife.netlify.app/2022/05/19/gozero_structure/"/>
+    <id>https://kaidloglife.netlify.app/2022/05/19/gozero_structure/</id>
+    <published>2022-05-18T18:07:38.287Z</published>
+    <updated>2022-05-18T18:11:28.470Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="fj-gallery"><p><img src="https://github.com/Mikaelemmmm/go-zero-looklook/raw/main/doc/chinese/images/1/gozerolooklook.png" alt="A"></p>          </div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Software Development" scheme="https://kaidloglife.netlify.app/categories/Software-Development/"/>
+    
+    <category term="golang" scheme="https://kaidloglife.netlify.app/categories/Software-Development/golang/"/>
+    
+    
+    <category term="golang" scheme="https://kaidloglife.netlify.app/tags/golang/"/>
+    
+    <category term="gozero" scheme="https://kaidloglife.netlify.app/tags/gozero/"/>
+    
+  </entry>
   
   <entry>
     <title>How to pack a set of unit tests for golang program?</title>

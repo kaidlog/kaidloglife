@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
+    <loc>https://kaidloglife.netlify.app/2022/05/19/gozero_structure/</loc>
     
     <lastmod>2022-05-18</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/link/index.html</loc>
+    
+    <lastmod>2022-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/</loc>
     
     <lastmod>2022-05-18</lastmod>
     
@@ -165,6 +174,20 @@
   </url>
   
   <url>
+    <loc>https://kaidloglife.netlify.app/tags/golang/</loc>
+    <lastmod>2022-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/tags/gozero/</loc>
+    <lastmod>2022-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kaidloglife.netlify.app/tags/model/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -173,13 +196,6 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/tags/olg/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaidloglife.netlify.app/tags/golang/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -223,7 +239,7 @@
   </url>
   
   <url>
-    <loc>https://kaidloglife.netlify.app/categories/Commerce/</loc>
+    <loc>https://kaidloglife.netlify.app/categories/Software-Development/golang/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -231,6 +247,13 @@
   
   <url>
     <loc>https://kaidloglife.netlify.app/categories/Software-Development/JavaScript/</loc>
+    <lastmod>2022-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaidloglife.netlify.app/categories/Commerce/</loc>
     <lastmod>2022-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

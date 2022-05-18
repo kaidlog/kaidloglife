@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>What&#39;s the gozero structure?</title>
+      <link href="/2022/05/19/gozero_structure/"/>
+      <url>/2022/05/19/gozero_structure/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="fj-gallery"><p><img src="https://github.com/Mikaelemmmm/go-zero-looklook/raw/main/doc/chinese/images/1/gozerolooklook.png" alt="A"></p>          </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Development </category>
+          
+          <category> golang </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> golang </tag>
+            
+            <tag> gozero </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How to pack a set of unit tests for golang program?</title>
       <link href="/2022/05/19/pack_unit_test/"/>
       <url>/2022/05/19/pack_unit_test/</url>
