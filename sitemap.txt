@@ -1,9 +1,9 @@
+https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/
 https://kaidloglife.netlify.app/link/index.html
 https://kaidloglife.netlify.app/about/index.html
 https://kaidloglife.netlify.app/2019/12/05/as400/
 https://kaidloglife.netlify.app/2019/11/21/hexo_note/
 https://kaidloglife.netlify.app/2019/11/23/blog/
-https://kaidloglife.netlify.app/2019/11/21/monetary_simple_model/
 https://kaidloglife.netlify.app/2019/11/23/changelog/
 https://kaidloglife.netlify.app/2019/11/20/sitemap/
 https://kaidloglife.netlify.app/2022/05/19/pack_unit_test/
